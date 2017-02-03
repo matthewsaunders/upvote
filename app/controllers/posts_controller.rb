@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_filter :find_post, only: [:find, :edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -14,6 +16,23 @@ class PostsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to posts_path
+    else
+      render "edit"
+    end
+  end
+
+  def show
+  end
+
+  def destroy
   end
 
   private
