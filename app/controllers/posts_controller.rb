@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_filter :find_post, only: [:find, :edit, :update, :destroy]
+  before_filter :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -30,6 +30,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    redirect_to @post.link
   end
 
   def destroy
