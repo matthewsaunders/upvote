@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+.primary{
+  color: #217C7E;
+}
+
+.secondary{
+  color: #9A3334;
+}
+
+.tertiary{
+  color: #3399FF;
+}
+
+.bg-color{
+  background-color: #F3EFE0;
+}
+
+/*
+ *  Navbar
+ */
+
+.up-navbar{
+  background-color: #217C7E;
+  color: #fff;
+  padding: 5px 0px;
+  margin-top: 10px;
+}
+
+.up-navbar a{
+  color: #fff;
+}
+
+.up-navbar a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ *  Content
+ */
+ .up-content{
+  background-color: #F3EFE0;
+  padding: 5px 0px;
+ }
