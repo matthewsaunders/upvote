@@ -50,6 +50,10 @@
   text-decoration: none;
 }
 
+.up-logo{
+  width: 16px;
+}
+
 /*
  *  Content
  */
@@ -60,4 +64,24 @@
 
 .external-link{
   color: #828282;
+}
+
+/*
+ *  Post
+ */
+.post-primary{
+  margin-bottom: -2px;
+}
+
+.post-secondary{
+  color: #828282;
+  font-size: 8pt;
+}
+
+.post-row{
+  clear: both;
+}
+
+.post-block{
+  float: left;
 }

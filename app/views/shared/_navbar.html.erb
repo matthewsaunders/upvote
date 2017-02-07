@@ -2,7 +2,9 @@
   <div class="col-md-12">
 
     <strong>
-      <%= link_to "upvote", "/" %> &nbsp;
+      <%= link_to "/" do %>
+        <%= image_tag("arrow.png", class: "up-logo") %> upvote  &nbsp;
+      <% end %>
     </strong>
 
     <%= link_to "posts", posts_path %> |

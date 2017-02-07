@@ -3,13 +3,29 @@
     <table>
       <% @posts.each_with_index do |post, index| %>
         <div class="post">
-          <p>
-            <%= index + 1 %>.
-            <%= post.title %>
-            <% if !post.host.blank? %>
-              <span class="external-link">(<%= post.host %>)</span>
-            <% end %>
-          </p>
+
+          <div class="post-row">
+            <div class="post-block">
+              <%= index + 1 %>.
+            </div>
+
+            <div class="post-block">
+            </div>
+
+            <div class="post-block">
+              <p class="post-primary">
+                <%= post.title %>
+                <% if !post.host.blank? %>
+                  <span class="external-link">(<%= post.host %>)</span>
+                <% end %>
+              </p>
+
+              <p class="post-secondary">
+                7 hours ago
+              </p>
+            </div>
+          </div>
+
         </div>
       <% end %>
     </table>
