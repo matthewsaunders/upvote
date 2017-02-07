@@ -63,9 +63,6 @@
   padding: 5px 0px;
 }
 
-.external-link{
-  color: #828282;
-}
 
 /*
  *  Post
@@ -86,4 +83,9 @@
 .post-block{
   float: left;
   margin-right: 5px;
+}
+
+.post-link{
+  color: #828282;
+  font-size: 8pt;
 }

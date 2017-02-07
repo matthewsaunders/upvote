@@ -4,7 +4,19 @@ class Post < ApplicationRecord
 
   def host
     uri = URI(link)
-    uri.host.blank? ? "" : uri.host
+
+    if uri.host.blank?
+      host = ""
+    else
+      host = uri.host
+
+      # remove the preceding 'www'
+      tokens = host.split('.')
+      tokens.shift if tokens.first == "www"
+      host = tokens.join('.')
+    end
+
+    host
   end
 
 end
