@@ -14,7 +14,7 @@
 
             <div class="post-block">
               <p class="post-primary">
-                <%= post.title %>
+                <%= link_to post.title, post.link %>
                 <% if !post.host.blank? %>
                   <span class="external-link">(<%= post.host %>)</span>
                 <% end %>

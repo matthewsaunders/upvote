@@ -48,6 +48,7 @@
 .up-navbar a:hover{
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .up-logo{
@@ -84,4 +85,5 @@
 
 .post-block{
   float: left;
+  margin-right: 5px;
 }
