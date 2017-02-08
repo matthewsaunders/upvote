@@ -1,5 +1,5 @@
 <div class="row up-navbar">
-  <div class="col-md-12">
+  <div class="col-md-8">
 
     <strong>
       <%= link_to "/" do %>
@@ -9,5 +9,16 @@
 
     <%= link_to "posts", posts_path %> |
     <%= link_to "new", new_post_path %>
+
+  </div>
+  <div class="col-md-4 text-right">
+
+    <% if current_user %>
+      <%= current_user.email %> |
+      <%= link_to "logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "sign up", new_user_registration_path %> |
+      <%= link_to "login", new_user_session_path %>
+    <% end %>
   </div>
 </div>

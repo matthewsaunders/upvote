@@ -38,7 +38,7 @@
   background-color: #217C7E;
   color: #fff;
   padding: 5px 0px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .up-navbar a{
@@ -59,8 +59,12 @@
  *  Content
  */
 .up-content{
-  background-color: #F3EFE0;
   padding: 5px 0px;
+}
+
+.up-container{
+  margin-top: 10px;
+  background-color: #F3EFE0;
 }
 
 
