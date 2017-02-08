@@ -1,3 +1,5 @@
+user1 = User.create(email: "test@gmail.com", password: "qqqqqq", password_confirmation: "qqqqqq")
+user2 = User.create(email: "test2@gmail.com", password: "qqqqqq", password_confirmation: "qqqqqq")
 
 posts = [
   ["A website with a questionable future", "https://www.yahoo.com/"],
@@ -5,5 +7,5 @@ posts = [
 ]
 
 posts.each do |title, link|
-  Post.create(title: title, link: link)
+  Post.create(title: title, link: link, user: user1)
 end

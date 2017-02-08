@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
 
+  belongs_to :user
+
   validates_format_of :link, with: /\Ahttps?:\/\/w{3}?.?[^\.$.?#]*.[\a-zA-Z]*\z/
 
   def host
