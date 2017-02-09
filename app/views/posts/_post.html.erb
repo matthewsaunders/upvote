@@ -17,7 +17,9 @@
       </p>
 
       <p class="post-secondary">
-        0 points by <%= post.user.email %> <%= post.age %> | hide | <%= post.comments.count %> <%= "comment".pluralize(post.comments.count) %>
+        0 points by <%= post.user.email %> <%= post.age %> |
+        hide |
+        <%= link_to "#{post.comments.count} #{"comment".pluralize(post.comments.count)}", post_comments_path(post) %>
       </p>
     </div>
   </div>
