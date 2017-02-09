@@ -9,3 +9,7 @@ posts = [
 posts.each do |title, link|
   Post.create(title: title, link: link, user: user1)
 end
+
+comments = [
+  ["I agree. Questinable indeed!"]
+]

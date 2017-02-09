@@ -17,7 +17,7 @@
       </p>
 
       <p class="post-secondary">
-        23 points by <%= post.user.email %> 7 hours ago | hide | 21 comments
+        0 points by <%= post.user.email %> <%= post.age %> | hide | <%= post.comments.count %> <%= "comment".pluralize(post.comments.count) %>
       </p>
     </div>
   </div>
