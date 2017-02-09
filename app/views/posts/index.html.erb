@@ -2,31 +2,9 @@
   <div class="col-md-12">
     <table>
       <% @posts.each_with_index do |post, index| %>
-        <div class="post">
 
-          <div class="post-row">
-            <div class="post-block">
-              <%= index + 1 %>.
-            </div>
+        <%= render partial: "post", locals: {post: post, index: index + 1} %>
 
-            <div class="post-block">
-            </div>
-
-            <div class="post-block">
-              <p class="post-primary">
-                <%= link_to post.title, post.link %>
-                <% if !post.host.blank? %>
-                  <span class="post-link">(<%= post.host %>)</span>
-                <% end %>
-              </p>
-
-              <p class="post-secondary">
-                7 hours ago by <%= post.user.email %>
-              </p>
-            </div>
-          </div>
-
-        </div>
       <% end %>
     </table>
   </div>

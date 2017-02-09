@@ -1,0 +1,25 @@
+<div class="post">
+
+  <div class="post-row">
+    <div class="post-block">
+      <%= index %>.
+    </div>
+
+    <div class="post-block">
+    </div>
+
+    <div class="post-block">
+      <p class="post-primary">
+        <%= link_to post.title, post.link %>
+        <% if !post.host.blank? %>
+          <span class="post-link">(<%= post.host %>)</span>
+        <% end %>
+      </p>
+
+      <p class="post-secondary">
+        23 points by <%= post.user.email %> 7 hours ago | hide | 21 comments
+      </p>
+    </div>
+  </div>
+
+</div>
