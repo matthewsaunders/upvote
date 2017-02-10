@@ -1,12 +1,14 @@
 <div class="post">
 
   <div class="post-row">
-    <div class="post-block">
-      <%= index %>.
-    </div>
+    <% if defined? index %>
+      <div class="post-block">
+        <%= index %>.
+      </div>
 
-    <div class="post-block">
-    </div>
+      <div class="post-block">
+      </div>
+    <% end %>
 
     <div class="post-block">
       <p class="post-primary">

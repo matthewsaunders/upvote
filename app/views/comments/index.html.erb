@@ -1,27 +1,50 @@
-<h1>Comments</h1>
-
 <div class="row">
   <div class="col-md-12">
 
+    <%= render partial: "posts/post", locals: {post: @post} %>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+
+    <%= form_for [@post, @comment], method: :post do |f| %>
+      <div class="form-group">
+        <%= f.text_area :text, size: "50x8", class: "form-control", placeholder: "Comment here...", rows: 5 %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Add Comment", class: "btn btn-default" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="comments">
+  <% @comments.each do |c| %>
+
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12">
 
-        <%= form_for [@post, @comment], method: :post do |f| %>
-          <div class="form-group">
-            <!-- <%= f.text_field :text, class: "form-control" %> -->
-            <%= f.text_field :text, class: "form-control", placeholder: "Comment here...", rows: 5 %>
-          </div>
+        <div class="post-block">
+          <p class="comment-first">
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+          </p>
+        </div>
 
-          <div class="form-group">
-            <%= f.submit "Add Comment", class: "btn btn-default" %>
-          </div>
-        <% end %>
+        <div class="post-block">
+          <p class="comment-first">
+            <%= c.user.email %> - <%= c.age %>
+          </p>
+          <p class="comment-second">
+            <%= c.text %>
+          </p>
+        </div>
 
       </div>
     </div>
 
-  </div>
+  <% end %>
 </div>
-<% @comments.each do |c| %>
-  <%= c.text %>
-<% end %>

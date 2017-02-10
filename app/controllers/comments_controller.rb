@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:create]
+
   before_filter :find_post, only: [:index, :create]
 
   def index
