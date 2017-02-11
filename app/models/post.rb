@@ -2,6 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   has_many :comments
+  has_many :votes
 
   validates_format_of :link, with: /\Ahttps?:\/\/w{3}?.?[^\.$.?#]*.[\a-zA-Z]*\z/
 
